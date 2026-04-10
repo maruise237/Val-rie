@@ -1,0 +1,124 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  padding-bottom: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.welcome {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.userName {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.notifBtn {
+  position: relative;
+  color: var(--text-main);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #f44336;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.statInfo {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.mainAction {
+  margin-bottom: 3rem;
+}
+
+.menu h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.menuItem {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+}
+
+.menuItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary);
+  transform: scale(1.02);
+}
+
+.menuItem span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}

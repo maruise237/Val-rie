@@ -1,0 +1,116 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.back {
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.avatarBig {
+  width: 100px;
+  height: 100px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.badgeBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 193, 7, 0.1);
+  color: #FFC107;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.infoGrid .glass-card {
+  padding: 1.2rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-muted);
+}
+
+.infoGrid span {
+  font-weight: 800;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.historyText {
+  flex: 1;
+}
+
+.hTitle {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.hDate {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.hAmount {
+  font-weight: 800;
+  color: #4CAF50;
+  font-size: 0.9rem;
+}

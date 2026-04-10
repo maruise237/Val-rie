@@ -1,0 +1,145 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.back {
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.list {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  gap: 15px;
+  border-bottom: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.itemIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.itemContent {
+  flex: 1;
+}
+
+.itemTitle {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.itemDesc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.toggle, .toggleActive {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.toggleActive {
+  background: var(--primary);
+}
+
+.toggleActive::after {
+  content: '';
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.logoutWrapper {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #f44336;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem;
+  background: rgba(244, 67, 54, 0.05);
+  border: 1px solid rgba(244, 67, 54, 0.1);
+  border-radius: 16px;
+}
+
+.version {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

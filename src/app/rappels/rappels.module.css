@@ -1,0 +1,75 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.back {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notifCard {
+  display: flex;
+  gap: 15px;
+  padding: 1.2rem !important;
+  align-items: flex-start;
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.top h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.time {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}

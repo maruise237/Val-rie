@@ -1,0 +1,119 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.back {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.summaryCard {
+  background: var(--primary-glow);
+  border: 1px solid var(--primary);
+  padding: 2.5rem 1.5rem;
+  border-radius: 24px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.summaryCard p {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.summaryCard h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0.5rem 0;
+}
+
+.tontineName {
+  color: var(--text-muted) !important;
+  font-size: 0.85rem !important;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.methodBtn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.methodBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary);
+}
+
+.methodName {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.methodDesc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.secureInfo {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.successStep {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.successIcon {
+  margin-bottom: 2rem;
+}
+
+.successStep h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.successStep p {
+  color: var(--text-muted);
+}
