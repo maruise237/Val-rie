@@ -24,7 +24,7 @@ export default function LoginPage() {
       });
 
       if (error) throw error;
-      window.location.href = "/dashboard";
+      window.location.href = "/accueil";
     } catch (err: any) {
       setError(err.message || "Email ou mot de passe incorrect.");
     } finally {

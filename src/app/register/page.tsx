@@ -25,7 +25,7 @@ export default function RegisterPage() {
       });
 
       if (error) throw error;
-      window.location.href = "/dashboard";
+      window.location.href = "/accueil";
     } catch (err: any) {
       setError(err.message || "Une erreur est survenue lors de l'inscription.");
     } finally {
