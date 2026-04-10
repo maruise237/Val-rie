@@ -33,7 +33,7 @@ export default function Home() {
           </p>
           <div className={styles.ctaGroup}>
             <Link href="/login" className="btn-primary">Commencer Maintenant</Link>
-            <button className={styles.btnSecondary}>Voir la Démo</button>
+            <Link href="/register" className={styles.btnSecondary}>S'inscrire</Link>
           </div>
         </div>
       </section>

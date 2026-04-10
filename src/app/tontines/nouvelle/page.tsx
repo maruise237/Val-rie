@@ -13,7 +13,7 @@ export default function NouvelleTontinePage() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Link href="/dashboard" className={styles.back}>
+        <Link href="/admin/accueil" className={styles.back}>
           <ChevronLeft size={20} />
           <span>Fermer</span>
         </Link>
@@ -48,7 +48,7 @@ export default function NouvelleTontinePage() {
         <div className={styles.field}>
           <div className={styles.labelWithAction}>
             <label>Sélectionner les membres</label>
-            <Link href="/dashboard/membres/nouveau" className={styles.linkAction}>+ Créer nouveau</Link>
+            <Link href="/membres/nouveau" className={styles.linkAction}>+ Créer nouveau</Link>
           </div>
           <div className={styles.membersChecklist}>
             {membresDisponibles.map((membre) => (

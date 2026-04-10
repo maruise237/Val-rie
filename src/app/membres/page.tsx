@@ -25,7 +25,7 @@ export default function ListeMembresPage() {
         </Link>
         <div className={styles.titleRow}>
           <h1>Membres</h1>
-          <Link href="/dashboard/membres/nouveau" className={styles.addBtn}>
+          <Link href="/membres/nouveau" className={styles.addBtn}>
             <Plus size={20} />
           </Link>
         </div>

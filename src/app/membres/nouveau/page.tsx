@@ -6,7 +6,7 @@ export default function NouveauMembrePage() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Link href="/dashboard" className={styles.back}>
+        <Link href="/membres" className={styles.back}>
           <ChevronLeft size={20} />
           <span>Retour</span>
         </Link>
