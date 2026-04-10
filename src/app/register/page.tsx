@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { auth } from "@/lib/insforge";
+import { auth, db } from "@/lib/insforge";
 import { User, Mail, Lock, Phone, ChevronRight, Loader2 } from "lucide-react";
 import styles from "./register.module.css";
 
@@ -10,6 +10,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
+  const [role, setRole] = useState("membre"); // 'membre' par défaut
   const [error, setError] = useState("");
 
   const handleRegister = async (e: React.FormEvent) => {
@@ -22,9 +23,22 @@ export default function RegisterPage() {
         email,
         password,
         name: fullName,
+        options: {
+          data: { role: role } // On passe le rôle dans les metadata
+        }
       });
 
       if (error) throw error;
+
+      // Création manuelle du profil dans la table 'profiles'
+      if (data?.user) {
+        await db.from('profiles').insert([{
+          id: data.user.id,
+          full_name: fullName,
+          role: role
+        }]);
+      }
+
       window.location.href = "/accueil";
     } catch (err: any) {
       setError(err.message || "Une erreur est survenue lors de l'inscription.");
@@ -71,6 +85,23 @@ export default function RegisterPage() {
           <div className={styles.inputGroup}>
             <Phone size={20} className={styles.icon} />
             <input type="tel" placeholder="Téléphone (ex: +237...)" className={styles.input} />
+          </div>
+
+          <div className={styles.roleSelector}>
+            <button 
+              type="button" 
+              className={role === 'membre' ? styles.roleActive : styles.roleItem}
+              onClick={() => setRole('membre')}
+            >
+              Membre
+            </button>
+            <button 
+              type="button" 
+              className={role === 'gestionnaire' ? styles.roleActive : styles.roleItem}
+              onClick={() => setRole('gestionnaire')}
+            >
+              Gestionnaire
+            </button>
           </div>
 
           <div className={styles.inputGroup}>

@@ -83,6 +83,31 @@
   box-shadow: 0 0 15px var(--primary-glow);
 }
 
+.roleSelector {
+  display: flex;
+  gap: 10px;
+  margin: 0.5rem 0;
+}
+
+.roleItem, .roleActive {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+}
+
+.roleActive {
+  background: var(--primary-glow);
+  border-color: var(--primary);
+  color: #fff;
+}
+
 .footer {
   margin-top: 2rem;
   text-align: center;
