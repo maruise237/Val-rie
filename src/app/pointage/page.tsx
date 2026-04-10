@@ -23,7 +23,13 @@ export default function RootPointagePage() {
   const handlePointage = async (membreId: string) => {
     setSavingId(membreId);
     try {
-      await db.from('cotisations').insert([{ member_id: membreId, amount: 5000, status: 'payé' }]);
+      const now = new Date().toISOString(); // Capture de l'heure précise
+      await db.from('cotisations').insert([{ 
+        member_id: membreId, 
+        amount: 5000, 
+        status: 'payé',
+        payment_date: now // Enregistrement automatique de l'heure
+      }]);
       setSuccessId(membreId);
       setTimeout(() => setSuccessId(null), 2000);
     } catch (err) {
