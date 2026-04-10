@@ -23,9 +23,6 @@ export default function RegisterPage() {
         email,
         password,
         name: fullName,
-        options: {
-          data: { role: role } // On passe le rôle dans les metadata
-        }
       });
 
       if (error) throw error;
