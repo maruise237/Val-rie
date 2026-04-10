@@ -21,11 +21,7 @@ export default function RegisterPage() {
       const { data, error } = await auth.signUp({
         email,
         password,
-        options: {
-          data: {
-            full_name: fullName,
-          }
-        }
+        name: fullName,
       });
 
       if (error) throw error;
