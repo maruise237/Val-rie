@@ -28,7 +28,7 @@ export default function LoginPage() {
       // Récupérer le rôle de l'utilisateur depuis son profil
       const { data: profile } = await db.from('profiles')
         .select('role')
-        .eq('id', data.user?.id)
+        .eq('id', data?.user?.id)
         .single();
 
       if (profile?.role === 'gestionnaire' || profile?.role === 'admin') {
