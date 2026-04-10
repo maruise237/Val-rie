@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -16,8 +16,13 @@ export const metadata: Metadata = {
   title: "Valérie Finance | Gestion de Tontine Moderne",
   description: "La plateforme premium pour digitaliser et sécuriser la gestion de vos tontines.",
   manifest: "/manifest.json",
+};
+
+export const viewport: Viewport = {
   themeColor: "#8a2be2",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
