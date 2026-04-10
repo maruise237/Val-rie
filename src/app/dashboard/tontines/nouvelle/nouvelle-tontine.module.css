@@ -1,0 +1,114 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.back {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.radioGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.radioLabel {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+}
+
+.radioLabel input {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
+.labelWithAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkAction {
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.membersChecklist {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.checkItem {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.checkItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.checkItem input {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
+.infoBox {
+  display: flex;
+  gap: 12px;
+  background: rgba(33, 150, 243, 0.08);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
