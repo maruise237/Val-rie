@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { auth } from "@/lib/insforge";
+import { auth, db } from "@/lib/insforge";
 import { LucideLoader2, Mail, Lock, ChevronRight } from "lucide-react";
 import styles from "./login.module.css";
 
@@ -24,7 +24,18 @@ export default function LoginPage() {
       });
 
       if (error) throw error;
-      window.location.href = "/accueil";
+
+      // Récupérer le rôle de l'utilisateur depuis son profil
+      const { data: profile } = await db.from('profiles')
+        .select('role')
+        .eq('id', data.user?.id)
+        .single();
+
+      if (profile?.role === 'gestionnaire' || profile?.role === 'admin') {
+        window.location.href = "/admin/accueil";
+      } else {
+        window.location.href = "/accueil";
+      }
     } catch (err: any) {
       setError(err.message || "Email ou mot de passe incorrect.");
     } finally {
