@@ -36,7 +36,11 @@ export default function RegisterPage() {
         }]);
       }
 
-      window.location.href = "/accueil";
+      if (role === 'gestionnaire' || role === 'admin') {
+        window.location.href = "/admin/accueil";
+      } else {
+        window.location.href = "/accueil";
+      }
     } catch (err: any) {
       setError(err.message || "Une erreur est survenue lors de l'inscription.");
     } finally {
