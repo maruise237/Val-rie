@@ -1,14 +1,16 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: radial-gradient(circle at center, rgba(138, 43, 226, 0.05) 0%, transparent 70%);
 }
 
 .card {
   width: 100%;
-  max-width: 450px;
+  max-width: 420px;
+  padding: 2.5rem;
   text-align: center;
 }
 
@@ -17,7 +19,8 @@
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
   margin: 1rem 0 0.5rem;
 }
 
@@ -26,33 +29,49 @@
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   text-align: left;
-}
-
-.inputGroup {
-  margin-bottom: 1.5rem;
 }
 
 .inputGroup label {
   display: block;
   font-size: 0.9rem;
-  margin-bottom: 0.5rem;
   color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+}
+
+.inputWithIcon input {
+  padding-left: 3rem !important;
 }
 
 .options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  margin: 1.5rem 0;
+  font-size: 0.85rem;
 }
 
 .remember {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
   cursor: pointer;
+  color: var(--text-muted);
 }
 
 .forgot {
@@ -66,7 +85,12 @@
   color: var(--text-muted);
 }
 
-.footer a {
-  text-decoration: none;
-  font-weight: 600;
+.error {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  border: 1px solid rgba(244, 67, 54, 0.2);
 }

@@ -1,32 +1,15 @@
-/**
- * Valérie Finance - Insforge Integration
- * This module handles communication with the Insforge BaaS.
- */
+import { createClient } from '@insforge/sdk';
 
-export const insforgeConfig = {
-  endpoint: process.env.NEXT_PUBLIC_INSFORGE_URL || 'https://api.insforge.dev',
-  apiKey: process.env.INSFORGE_API_KEY,
-};
+const baseUrl = process.env.NEXT_PUBLIC_INSFORGE_URL || 'https://9kn7a58r.us-east.insforge.app';
+const anonKey = 'ik_db4b5ef1b0e8210c33dbf12dd33b1432'; // Anon key from setup
 
-export const syncCotisations = async (cotisations: any[]) => {
-  console.log('Syncing to Insforge...', cotisations);
-  // Implementation of push logic to Insforge REST API
-  // return await fetch(`${insforgeConfig.endpoint}/cotisations`, { ... });
-  
-  // Mocking success for now
-  return { success: true, count: cotisations.length };
-};
+export const insforge = createClient({
+  baseUrl,
+  anonKey,
+});
 
-export const fetchTontineDetails = async (id: string) => {
-  // Mock data for initial development
-  return {
-    id,
-    nom: 'Tontine Solidarité',
-    frequence: 'Mensuelle',
-    montant_fixe: 50000,
-    membres: [
-      { id: '1', nom: 'Alice', solde: 150000 },
-      { id: '2', nom: 'Bob', solde: 100000 },
-    ]
-  };
-};
+// Helper for Auth
+export const auth = insforge.auth;
+
+// Helper for Database
+export const db = insforge.db;
